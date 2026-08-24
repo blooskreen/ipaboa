@@ -50,6 +50,21 @@ final class Roles
         self::ADMIN,
     ];
 
+    /**
+     * Roles that take part in the training program, and therefore see the
+     * hours gauge, courses, assessments and certificates on the dashboard.
+     * Standard User is deliberately absent: they have registered but are not
+     * yet an official. Store Admin is store staff, not an official.
+     */
+    public const TRAINING = [
+        self::OFFICIAL,
+        self::CAMPER,
+        self::LEADERSHIP,
+        self::CAMP_ADMIN,
+        self::ADMIN,
+        self::SUPER,
+    ];
+
     /** May promote / graduate / renew members. */
     public const CAN_PROMOTE = [
         self::SUPER,

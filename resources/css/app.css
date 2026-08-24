@@ -4,6 +4,46 @@
 @source '../../storage/framework/views/*.php';
 
 @theme {
+    /* IPABOA palette */
+    --color-brand:      #4B2E83;
+    --color-brand-dark: #35205C;
+    --color-brand-red:  #C8102E;
+    --color-brand-blue: #1D3C87;
+    --color-gold:       #C9A227;
+    --color-gold-soft:  #E4C766;
+    --color-ink:        #0D0D0D;
+    --color-ink-soft:   #1A1A1D;
+
+    --font-display: 'Barlow Condensed', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Rich text written in the Filament editor: course descriptions, articles. */
+.prose-ipaboa h1, .prose-ipaboa h2, .prose-ipaboa h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+.prose-ipaboa h1 { font-size: 1.875rem; }
+.prose-ipaboa h2 { font-size: 1.5rem; }
+.prose-ipaboa h3 { font-size: 1.25rem; }
+.prose-ipaboa p  { margin-bottom: 1rem; }
+.prose-ipaboa ul, .prose-ipaboa ol { margin: 0 0 1rem 1.25rem; }
+.prose-ipaboa ul { list-style: disc; }
+.prose-ipaboa ol { list-style: decimal; }
+.prose-ipaboa li { margin-bottom: 0.375rem; }
+.prose-ipaboa a  { color: var(--color-brand); text-decoration: underline; }
+.prose-ipaboa img { border-radius: 0.5rem; margin: 1rem 0; max-width: 100%; height: auto; }
+.prose-ipaboa strong { font-weight: 700; color: var(--color-ink); }
+.prose-ipaboa blockquote {
+    border-left: 3px solid var(--color-gold);
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 1rem 0;
 }

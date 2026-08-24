@@ -52,6 +52,18 @@ class Course extends Model
         return $query->where('is_published', true);
     }
 
+    public function embedUrl(): ?string
+    {
+        return \App\Support\Embed::url($this->content_url);
+    }
+
+    public function imageUrl(): ?string
+    {
+        return $this->image_path
+            ? \Illuminate\Support\Facades\Storage::disk('public')->url($this->image_path)
+            : \App\Support\Embed::poster($this->content_url);
+    }
+
     public function instructorList(): string
     {
         return implode(', ', array_filter((array) $this->instructors));
